@@ -18,6 +18,8 @@
 # Input: num = 4
 # Output: "IV"
 
+## Good discussion -> https://leetcode.com/problems/integer-to-roman/discuss/6304/Python-simple-solution
+
 
 def integer_to_roman(data):
     roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
