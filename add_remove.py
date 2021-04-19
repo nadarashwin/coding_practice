@@ -25,7 +25,7 @@ class toggle:
         return len(self.dict[val]) == 1
 
     def remove(self, val):
-        if val not in self.dict:
+        if val not in self.dict or len(self.dict[val]) == 0:  # we don't remove key from dict ONLY remove the index value
             return False
 
         idx = self.dict[val].pop() # get the index of the value passed from the dict
