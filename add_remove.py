@@ -29,13 +29,15 @@ class toggle:
             return False
 
         idx = self.dict[val].pop() # get the index of the value passed from the dict
-        last = self.lst.pop() # pop out the last element from the list
+        # cannot use pop for lst directly, can cause idx out of range issue if it's the last one
+        last = self.lst[-1]
 
         self.dict[last].add(idx) # add the index of the value to be removed to the last element in the dict
         self.lst[idx] = last  # replace the value of the index to be removed with last
 
-        self.dict[last].remove(len(self.lst)) # remove the old index  of last
+        self.dict[last].remove(len(self.lst) - 1) # remove the old index  of last
         print(self.lst,  self.dict)
+        self.lst.pop()
         return True
 
     def getRandom(self):
@@ -43,9 +45,13 @@ class toggle:
 
 
 a = toggle()
-print(a.insert(2))
-print(a.insert(24))
-print(a.insert(22))
-print(a.insert(21))
-print(a.remove(2))
+# print(a.insert(2))
+# print(a.insert(24))
+# print(a.insert(22))
+# print(a.insert(21))
+# print(a.remove(2))
+## ------------------- ##
+print(a.insert(1))
+print(a.remove(1))
+print(a.insert(1))
 print(a.getRandom())
