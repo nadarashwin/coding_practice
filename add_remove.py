@@ -15,7 +15,7 @@ from random import choice
 class toggle:
     def __init__(self):
         self.lst = [] # Create a empty list 
-        self.dict =  defaultdict(set) # create dict with set as the  default dict as duplicates are allowed
+        self.dict =  defaultdict(set) # create dict with set as indexes are unique
         
     def insert(self, val):
         # set allows add method wherein list allows append

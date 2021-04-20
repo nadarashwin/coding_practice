@@ -2,10 +2,13 @@
 
 def sort_dict(data):
     # OrderedDict preserves the order in which the keys are inserte
-    from collections import OrderedDict
-    data = OrderedDict(sorted(data.items()))
+    # from collections import OrderedDict
+    # data = OrderedDict(sorted(data.items()))
 
-    return sorted(data.items(), key=lambda x: x[-1], reverse=True)
+    # return sorted(data.items(), key=lambda x: x[-1], reverse=True)
+
+    data = sorted(data.items()) # returns list of tuples
+    return sorted(data, key=lambda x: x[-1], reverse=True)
 
 
 

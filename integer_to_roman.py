@@ -18,6 +18,12 @@
 # Input: num = 4
 # Output: "IV"
 
+# Input: num = 58
+# Output: "LVIII"
+
+# Input: num = 1994
+# Output: "MCMXCIV"
+
 ## Good discussion -> https://leetcode.com/problems/integer-to-roman/discuss/6304/Python-simple-solution
 
 
