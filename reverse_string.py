@@ -20,4 +20,6 @@ def reverse_string(data):
     return ''.join(data)
 
 s = "champesh"
+s = "ab-cd"
+s = "a-bC-dEf-ghIj"
 print(reverse_string(s))
