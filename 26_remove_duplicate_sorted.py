@@ -6,10 +6,8 @@
 
 # Input: nums = [1,1,2]
 # Output: 2, nums = [1,2]
-# Explanation: Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. 
+# Explanation: Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
 # It doesn't matter what you leave beyond the returned length.
-
-
 
 
 # def removeSortedList(data):
@@ -17,8 +15,9 @@
 #     data[:] =  sorted(set(data)) ## The difference between nums[:] = and nums = is that the latter doesn't replace elements in the original list.
 #     return data
 
+
 def removeSortedList(data):
-    ## inPlace
+    # inPlace
     counter = 0
     while (counter < len(data)):
         if data[counter] in data[:counter]:
@@ -27,5 +26,6 @@ def removeSortedList(data):
             counter += 1
     return data
 
-print(removeSortedList([1,1,2]))
-print(removeSortedList([-1,0,0,0,0,3,3]))
+
+print(removeSortedList([1, 1, 2]))
+print(removeSortedList([-1, 0, 0, 0, 0, 3, 3]))

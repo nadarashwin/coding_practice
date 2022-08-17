@@ -12,7 +12,6 @@
 # It doesn't matter what you leave beyond the returned length. For example if you return 2 with nums = [2,2,3,3] or nums = [2,2,0,0], your answer will be accepted.
 
 
-
 def removeElement(data, val):
     print(id(data))
     i = 0
@@ -22,13 +21,11 @@ def removeElement(data, val):
     #     else:
     #         i += 1
 
-
     while i < len(data):
         if data[i] == val:
             del data[i]
         else:
             i += 1
-
 
     print(id(data))
     return data

@@ -6,8 +6,6 @@
 # Output: "bab"
 # Note: "aba" is also a valid answer.
 
-
-
 def longestPalindrome(s):
     res = ""
     for i in range(len(s)):
@@ -19,11 +17,12 @@ def longestPalindrome(s):
         tmp = helper(s, i, i+1)
         if len(tmp) > len(res):
             res = tmp
-            
     return res
- 
-# get the longest palindrome, l, r are the middle indexes   
+
+# get the longest palindrome, l, r are the middle indexes
 # from inner to outer
+
+
 def helper(s, l, r):
     while l >= 0 and r < len(s) and s[l] == s[r]:
         l -= 1; r += 1

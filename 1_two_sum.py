@@ -4,7 +4,6 @@
 
 # You can return the answer in any order.
 
- 
 
 # Example 1:
 
@@ -22,6 +21,7 @@ def two_sum(nums, target):
             return(i, hash_table[temp])
     return("nothing found")
 
-print(two_sum([2,7,11,15], 9))
-print(two_sum([3,2,4], 6))
-print(two_sum([3,3], 6))
+
+print(two_sum([2, 7, 11, 15], 9))
+print(two_sum([3, 2, 4], 6))
+print(two_sum([3, 3], 6))

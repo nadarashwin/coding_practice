@@ -8,7 +8,6 @@
 # Output: "fl"
 
 
-
 def LCP(prefix, word):
     i = 0
     while i < len(prefix) and i < len(word):
@@ -31,6 +30,10 @@ def findLCP(words, low, high):
     if low == high:
         return words[low]
 
+    # prefix = words[0]
+    # for word in words[1:]:
+    #     prefix = findLCP(prefix, word)
+    # return prefix
     mid = (low+high) // 2
     print(mid)
     x = findLCP(words, low, mid)
@@ -38,6 +41,7 @@ def findLCP(words, low, high):
 
     return LCP(x, y)
 
+
 words = ["techie delight", "tech", "techie", "technology", "technical"]
-#print(findLCP(words))
+# print(findLCP(words))
 print(findLCP(words, 0, len(words)-1))

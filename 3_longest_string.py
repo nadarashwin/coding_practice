@@ -1,7 +1,5 @@
 # Given a string s, find the length of the longest substring without repeating characters.
 
- 
-
 # Example 1:
 
 # Input: s = "abcabcbb"
@@ -16,9 +14,10 @@ def longest_string(data):
             start = temp[data[index]] + 1
         temp[data[index]] = index
         maxL = max(maxL, index - start + 1)
-    #print(start, maxL)
+    # print(start, maxL)
 
     return maxL
+
 
 print(longest_string("abcabcbbd"))
 print(longest_string("bbbbb"))

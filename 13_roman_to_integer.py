@@ -6,7 +6,6 @@
 # Output: 3
 
 
-
 values = {
   "I": 1,
   "V": 5,
@@ -16,6 +15,7 @@ values = {
   "D": 500,
   "M": 1000,
 }
+
 
 def rom_to_int(roman):
     """
@@ -28,7 +28,7 @@ def rom_to_int(roman):
             second_param = values[roman[i+1]]
             if first_param < second_param:
                 total = total - first_param
-                i += 1 
+                i += 1
             else:
                 total = total + second_param
                 i += 1
@@ -47,11 +47,9 @@ def rom_to_int(roman):
             ans += values[roman[i]]
         else:
             ans -= values[roman[i]]
-        
         p = values[roman[i]]
 
     return ans
-
 
 
 print(rom_to_int('V'))

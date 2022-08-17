@@ -7,10 +7,8 @@
 # Input: x = 121
 # Output: true
 
-
-
 def palindrome_no(data):
-    if data < 0 :
+    if data < 0:
         return False
 
     temp = data
@@ -28,6 +26,7 @@ def palindrome_no(data):
     # if str(data) == str(data)[::-1]:
     #     return True
     # return False
+
 
 raw = -121
 print(palindrome_no(raw))

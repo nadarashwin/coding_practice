@@ -24,15 +24,15 @@
 # Input: num = 1994
 # Output: "MCMXCIV"
 
-## Good discussion -> https://leetcode.com/problems/integer-to-roman/discuss/6304/Python-simple-solution
+# Good discussion -> https://leetcode.com/problems/integer-to-roman/discuss/6304/Python-simple-solution
 
 
-def integer_to_roman(data):
+def int_to_roman(data):
     roman = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
     integer = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 
     value = ''
-    i = 0
+    # i = 0
     # while data:
     #     value += (data//integer[i]) *  roman[i]
     #     data %= integer[i]
@@ -44,5 +44,8 @@ def integer_to_roman(data):
         data %= j
     return value
 
-a = 3
-print(integer_to_roman(a))
+
+print(int_to_roman(34))
+print(int_to_roman(3))
+print(int_to_roman(58))
+print(int_to_roman(1994))
