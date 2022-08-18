@@ -1,4 +1,4 @@
-# Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, 
+# Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals,
 # and return an array of the non-overlapping intervals that cover all the intervals in the input.
 
 
@@ -15,6 +15,7 @@
 
 # Nice explaination -> https://leetcode.com/problems/merge-intervals/discuss/21227/7-lines-easy-Python
 
+
 def merge_intervals(data):
     temp_array = []
     for i in sorted(data): # for i in sorted(data, key=lambda x: x[0])
@@ -24,6 +25,7 @@ def merge_intervals(data):
             temp_array += i, # comma is equivalent to appending -> temp_array += [i] OR temp_array.append(i)
     return temp_array
 
-#a = [[1,4],[2,3]]
+
+# a = [[1,4],[2,3]]
 a = [[1, 3], [8, 10], [2, 6], [15, 18]]
 print(merge_intervals(a))

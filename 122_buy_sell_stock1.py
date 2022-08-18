@@ -19,6 +19,12 @@
 
 
 def buy_sell_stock1(data):
+    # profit = 0
+    # for i in range(len(data)-1):
+    #     if data[i+1] > data[i]:
+    #         profit += (data[i+1] - data[i])
+    # return profit
+
     max_price = 0
     for i in range(len(data)-1):
         max_price += max(data[i+1] - data[i], 0)  # get the max from (SELL - BUY) else set to 0

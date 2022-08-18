@@ -2,7 +2,6 @@
 
 # Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
 
- 
 
 # Example 1:
 
@@ -13,10 +12,10 @@
 def single_number(number):
     result = 0
     for element in number:
+        # If the two arguments are the same, the result is always 0
         result ^= element
     return result
-    
-    
+
     # temp_list = []
     # for element in number:
     #     if element not in temp_list:
@@ -24,7 +23,7 @@ def single_number(number):
     #     else:
     #         temp_list.remove(element)
     # return temp_list.pop()
-    
+
 
 print(single_number([2,2,1]))
 print(single_number([4,1,2,1,2]))

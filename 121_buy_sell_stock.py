@@ -33,8 +33,7 @@ def buy_sell_stocks(data):
     for price in data[1:]:
         if price < min_price:  # compare the min price with the current price
             min_price = price
-        else:
-            max_price = max(max_price, price - min_price)
+        max_price = max(max_price, price - min_price)
     return max_price
 
 
