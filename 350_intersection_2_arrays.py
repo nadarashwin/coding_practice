@@ -7,6 +7,7 @@
 
 # Input: nums1 = [1,2,2,1], nums2 = [2,2]
 # Output: [2,2]
+#
 # Example 2:
 
 # Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
@@ -14,6 +15,7 @@
 # Explanation: [9,4] is also accepted.
 
 def intersection_2_arrays(data1, data2):
+    # ------- FIRST WAY ------------
     # from collections import Counter
 
     # a, b = map(Counter, (data1, data2))
@@ -24,6 +26,7 @@ def intersection_2_arrays(data1, data2):
     # """
     # return list((a&b).elements())
 
+    # ------- SECOND WAY ------------
     temp_dict = {}
     # block of code that takes care of Counter in collections
     for i in data1:
@@ -41,9 +44,5 @@ def intersection_2_arrays(data1, data2):
     return ret
 
 
-
-nums1 = [4,9,5]
-nums2 = [9,4,9,8,4]
-nums1 = [1,2,2,1]
-nums2 = [2,2]
-print(intersection_2_arrays(nums1, nums2))
+print(intersection_2_arrays([4,9,5], [9,4,9,8,4]))
+print(intersection_2_arrays([1,2,2,1], [2,2]))

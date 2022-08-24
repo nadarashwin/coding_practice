@@ -1,5 +1,5 @@
 # Given a string S, return the "reversed" string where all characters
-# that are not a letter stay in the same place, and all letters reverse their positions. 
+# that are not a letter stay in the same place, and all letters reverse their positions.
 
 # Example 1:
 
@@ -16,7 +16,7 @@
 
 
 def reverse_string1(data):
-    ## First way
+    # ------FIRST WAY------
     # tmp = [r for r in data if r.isalpha()]
     # arr = []
     # for i in data:
@@ -26,7 +26,7 @@ def reverse_string1(data):
     #         arr.append(i)
     # return tmp, ''.join(arr)
 
-    ## Second way
+    # ------SECOND WAY------
     data = list(data)
     left, right = 0, len(data) - 1
 
@@ -37,9 +37,11 @@ def reverse_string1(data):
             right -= 1
         else:
             data[left], data[right] = data[right], data[left]
-            left +=1; right -= 1
+            left += 1
+            right -= 1
 
     return ''.join(data)
+
 
 a = "7_28]"
 a = "a-bC-dEf-ghIj"

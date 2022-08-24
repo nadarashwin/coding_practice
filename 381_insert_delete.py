@@ -14,12 +14,12 @@ from random import choice
 
 class toggle:
     def __init__(self):
-        self.lst = [] # Create a empty list 
+        self.lst = [] # Create a empty list
         self.dict =  defaultdict(set) # create dict with set as indexes are unique
-        
+
     def insert(self, val):
         # set allows add method wherein list allows append
-        self.dict[val].add(len(self.lst)) # length is less than the index 
+        self.dict[val].add(len(self.lst)) # length is less than the index
         self.lst.append(val)
         print(self.lst,  self.dict)
         return len(self.dict[val]) == 1

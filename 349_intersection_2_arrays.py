@@ -12,9 +12,11 @@
 # Explanation: [4,9] is also accepted.
 
 def intersection_2_arrays1(data1, data2):
+    # ------FIRST WAY------
     # set -> intersection performed using & operator
     #return list(set(data1) & set(data2)) # list(set(nums1).intersection(set(nums2)))
 
+    # ------SECOND WAY------
     # brute force
     temp_arr = []
     for i in data1:
@@ -22,6 +24,7 @@ def intersection_2_arrays1(data1, data2):
             temp_arr.append(i)
 
     return temp_arr
+
 
 nums1 = [4,9,5]
 nums2 = [9,4,9,8,4]
