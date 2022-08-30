@@ -20,11 +20,14 @@
 
 # Nice explaination -> https://leetcode.com/problems/max-number-of-k-sum-pairs/discuss/1022699/Python-Short-Counter-solution-%2B-Oneliner-explained
 
+
 def maxOperations(data, k):
     from collections import Counter
     count, maxO = Counter(data), 0
+    print(count)
     for val in count:
         maxO += min(count[val], count[k - val]) # if a key isn't present in Counter, it returns 0
+        print(maxO, count[val], count[k-val])
     return maxO//2
 
     # from collections import defaultdict
@@ -34,15 +37,15 @@ def maxOperations(data, k):
     #     tmp = k - j
     #     if tmp not in s or len(s[tmp]) == 0:
     #         s[j].add(i)
-    #     elif len(s[tmp]) > 0: 
+    #     elif len(s[tmp]) > 0:
     #         s[tmp].pop()
     #         max_p += 1
 
     # return max_p
 
-
 # nums = [1,2,3,4]
 # k = 5
+
 
 nums = [3,1,3,4,3]
 k = 6

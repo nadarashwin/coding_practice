@@ -11,7 +11,6 @@
 # Output : 1->2->3->4->5->7 - [1, 2, 3, 4, 5, 7]
 
 
-
 def mergeTwoLists(l1, l2):
     temp_list = []
     i = j = 0
@@ -22,13 +21,10 @@ def mergeTwoLists(l1, l2):
         else:
             temp_list.append(l2[j])
             j += 1
-    
+
     temp_list = temp_list + l1[i:] + l2[j:]
 
     return temp_list
 
 
-a = [1,2,4]
-b = [1,3,4]
-
-print(mergeTwoLists(a,b))
+print(mergeTwoLists([1,2,4], [1,3,4]))

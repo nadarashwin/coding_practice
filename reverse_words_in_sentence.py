@@ -24,15 +24,17 @@ def reverse_words(data):
             right -= 1
         else:
             ot[left], ot[right] = ot[right], ot[left]
-            left +=1; right -= 1
+            left += 1
+            right -= 1
 
     r = ''
     for i in ot:
         if i in punc or len(r) == 0:
             r += i
-        else:   
+        else:
             r += ' ' + i
     return ot, r
+
 
 o = 'you, shall not pass!!'
 
